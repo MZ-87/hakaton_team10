@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="questionlist" id="questionlist">
+        <div class="item">
+            <label for="senderName">От кого</label>
+            <input type="text" id="senderName" name="senderName" required />
+        </div>
+
+        <div class="item">
+            <label for="accepterName">Кому </label>
+            <input type="text" id="accepterName" name="accepterName" required />
+        </div>
+
+        <div class="item">
+            <label for="email">Электронная почта адресата</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="item">
+            <p>Выберите пол адресата</p>
+            <div>
+                <label for="male">Мужской</label>
+                <input type="radio" name="sex" id="male" value="male" />
+            </div>
+            <div>
+                <label for="female">Женский</label>
+                <input type="radio" name="sex" id="female" value="female" />
+            </div>
+        </div>
+        <div class="item">
+            <p> Выберите обращение</p>
+            <div>
+                <label for="male">Уважаемый/ая</label>
+                <input type="radio" name="greeting" id="respectful" value="Уважаемый/ая" />
+            </div>
+            <div>
+                <label for="female">Дорогой/ая</label>
+                <input type="radio" name="greeting" id="dear" value="Дорогой/ая" />
+            </div>
+        </div>
+        <div class="comments">
+            <label for="comm">Текст поздравления</label>
+            <textarea name="comments" id="comm" cols="40" rows="10"></textarea>
+        </div>
+
+        <div class="buttons">
+            <button class="saveBtn">Сохранить</button>
+            <button type="submit" class="sendBtn" form="questionlist">Создать открытку</button>
+        </div>
+    </form>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
