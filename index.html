@@ -5,11 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
-<body>
+<body onload="time()">
+    <div class="container-banner">
+        <h1 class="container-banner__title">До Нового года осталось всего</h1>
+        <div class="container-banner__counter">
+            <p>
+                <span id="time"></span>
+            </p>
+        </div>
+        <p>А ты еще никого не поздравил?</p>
+    </div>
+
+    <div>
+        <h2>Пора поздравить близких!!!</h2>
+        <div>
+            <p>
+                На нашем сайте вы сможете выбрать открытку и поздравление для ваших
+                родных и друзей!
+            </p>
+        </div>
+    </div>
+
+
     <form class="questionlist" id="questionlist">
         <div class="item">
             <label for="senderName">От кого</label>
@@ -60,6 +88,12 @@
 
 
     <script src="index.js"></script>
+</body>
+
+
+
+
+<script src="assets/scripts/index.js"></script>
 </body>
 
 </html>

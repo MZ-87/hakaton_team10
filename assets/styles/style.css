@@ -1,0 +1,6 @@
+@import "./container-banner/container-banner.css";
+@import "./form.css";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
