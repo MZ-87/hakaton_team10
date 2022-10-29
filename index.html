@@ -1,97 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="assets/styles/normalize.css">
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/normalize.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
     <title>Скоро Новый год</title>
-</head>
+  </head>
 
-<body onload="time()">
-    <div class="banner__container">
+  <body onload="time()">
+    <div class="content-container">
+      <div class="banner__container">
         <div class="banner__inside">
-            <div class="banner__text">
-                <div class="banner__text__block1">До Нового года <br> осталось всего</div>
-                <div class="banner__text__counter">
-                    <span id="time"></span>
-                </div>
-                <div class="banner__text__block2">а ты еще никого не <br> поздравил?</div>
+          <div class="banner__text">
+            <div class="banner__text__block1">
+              До Нового года <br />
+              осталось всего
             </div>
-            <img class="santa-img" src="/image/Santa.png" alt="Санта" href="/image/Santa.png">
+            <div class="banner__text__counter">
+              <span id="time"></span>
+            </div>
+            <div class="banner__text__block2">
+              а ты еще никого не <br />
+              поздравил?
+            </div>
+          </div>
+          <img
+            class="santa-img"
+            src="/image/Santa.png"
+            alt="Санта"
+            href="/image/Santa.png"
+          />
         </div>
-    </div>
+      </div>
 
-    <div>
-        <h2>Пора поздравить близких!!!</h2>
-        <p>
+      <div class="postcard">
+        <div class="postcard__title">
+          <h2>Пора поздравить близких!!!</h2>
+        </div>
+        <div class="postcard__text">
+          <p>
             На нашем сайте вы сможете выбрать открытку и поздравление для ваших
             родных и друзей!
-        </p>
-    </div>
-
-
-    <!-- Форма для открытки -->
-    <a href="#popup" class="popup__open">Создать открытку</a>
-
-    <div class="popup" id="popup">
-        <div class="popup__body">
-            <form action="" class="popup__content" id="popup__content">
-                <a href="" class="popup__close">&#215;</a>
-                <div class="item">
-                    <label for="senderName">От кого</label>
-                    <input type="text" id="senderName" name="senderName" required />
-                </div>
-
-                <div class="item">
-                    <label for="accepterName">Кому </label>
-                    <input type="text" id="accepterName" name="accepterName" required />
-                </div>
-
-                <div class="item">
-                    <label for="email">Электронная почта адресата</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="item">
-                    <p>Выберите пол адресата</p>
-                    <div>
-                        <label for="male">Мужской</label>
-                        <input type="radio" name="sex" id="male" value="male" />
-                    </div>
-                    <div>
-                        <label for="female">Женский</label>
-                        <input type="radio" name="sex" id="female" value="female" />
-                    </div>
-                </div>
-                <div class="comments">
-                    <label for="comm">Текст поздравления</label>
-                    <textarea name="comments" id="comm" cols="40" rows="10"></textarea>
-                </div>
-
-                <div class="buttons">
-                    <button class="saveBtn">Сохранить</button>
-                    <button type="submit" class="sendBtn" form="questionlist">Создать открытку</button>
-                </div>
-            </form>
+          </p>
         </div>
-    </div>
 
-    <!-- Открытка -->
-    <div class="container-card">
+        <div>
+          <a href="#popup" class="popup__open">Создать открытку</a>
+        </div>
+      </div>
+
+      <!-- Форма для открытки -->
+
+      <div class="popup" id="popup">
+        <div class="popup__body">
+          <form action="" class="popup__content" id="popup__content">
+            <a href="" class="popup__close">&#215;</a>
+            <div class="item">
+              <label for="senderName">От кого</label>
+              <input type="text" id="senderName" name="senderName" required />
+            </div>
+
+            <div class="item">
+              <label for="accepterName">Кому </label>
+              <input
+                type="text"
+                id="accepterName"
+                name="accepterName"
+                required
+              />
+            </div>
+
+            <div class="item">
+              <label for="email">Электронная почта адресата</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="item">
+              <p>Выберите пол адресата</p>
+              <div>
+                <label for="male">Мужской</label>
+                <input type="radio" name="sex" id="male" value="male" />
+              </div>
+              <div>
+                <label for="female">Женский</label>
+                <input type="radio" name="sex" id="female" value="female" />
+              </div>
+            </div>
+            <div class="comments">
+              <label for="comm">Текст поздравления</label>
+              <textarea
+                name="comments"
+                id="comm"
+                cols="40"
+                rows="10"
+              ></textarea>
+            </div>
+
+            <div class="buttons">
+              <button class="saveBtn">Сохранить</button>
+              <button type="submit" class="sendBtn" form="questionlist">
+                Создать открытку
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Открытка -->
+      <div class="container-card">
         <h3>Дорогой, <span>${data.form.accepterName}</span></h3>
         <h3>Дорогая, <span>${data.form.accepterName}</span></h3>
         <p>${data.form.comment}</p>
+      </div>
     </div>
-
-
     <script src="assets/scripts/index.js"></script>
-</body>
-
+  </body>
 </html>
