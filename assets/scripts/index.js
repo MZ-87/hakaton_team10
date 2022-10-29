@@ -60,19 +60,6 @@ document.querySelector('.saveBtn').addEventListener('click', (e) => {
     console.log(card);
 })
 
-//отправка формы
-document.querySelector('.sendBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-
-    fetch('https://httpbin.org/post', {
-            method: 'POST',
-            body: new FormData(popup__content)
-        })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
-})
-
 //модальное окно
 const openPopupButtons = document.querySelectorAll('.popup__open'); //кнопки-ссылки открытия
 const closePopupButtons = document.querySelectorAll('.popup__close'); //кнопки-ссылки закрытия
@@ -112,3 +99,17 @@ const popupOpen = (currentPopup) => {
 const popupClose = (popupActive) => {
     popupActive.classList.remove('open');
 }
+
+//открытка
+//отправка формы
+document.querySelector('.sendBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    fetch('https://httpbin.org/post', {
+            method: 'POST',
+            body: new FormData(popup__content)
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
+})

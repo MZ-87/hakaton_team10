@@ -70,10 +70,10 @@
                         <input type="radio" name="sex" id="female" value="female" />
                     </div>
                 </div>
-                <!-- <div class="comments">
-                        <label for="comm">Текст поздравления</label>
-                        <textarea name="comments" id="comm" cols="40" rows="10"></textarea>
-                    </div> -->
+                <div class="comments">
+                    <label for="comm">Текст поздравления</label>
+                    <textarea name="comments" id="comm" cols="40" rows="10"></textarea>
+                </div>
 
                 <div class="buttons">
                     <button class="saveBtn">Сохранить</button>
@@ -81,6 +81,13 @@
                 </div>
             </form>
         </div>
+    </div>
+
+    <!-- Открытка -->
+    <div class="container-card">
+        <h3>Дорогой, <span>${data.form.accepterName}</span></h3>
+        <h3>Дорогая, <span>${data.form.accepterName}</span></h3>
+        <p>${data.form.comment}</p>
     </div>
 
 
