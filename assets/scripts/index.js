@@ -32,33 +32,33 @@ class Card {
     }
 }
 
-document.querySelector('.saveBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    const senderName = document.querySelector('#senderName').value;
-    const accepterName = document.querySelector('#accepterName').value;
-    const email = document.querySelector('#email').value;
-    const comment = document.querySelector('#comm').value;
+// document.querySelector('.saveBtn').addEventListener('click', (e) => {
+//     e.preventDefault();
+//     const senderName = document.querySelector('#senderName').value;
+//     const accepterName = document.querySelector('#accepterName').value;
+//     const email = document.querySelector('#email').value;
+//     const comment = document.querySelector('#comm').value;
 
-    const sexAll = document.getElementsByName('sex');
-    let sex = 0;
-    sexAll.forEach(element => {
-        if (element.checked) {
-            sex = `${element.id}`;
-        }
-    })
+//     const sexAll = document.getElementsByName('sex');
+//     let sex = 0;
+//     sexAll.forEach(element => {
+//         if (element.checked) {
+//             sex = `${element.id}`;
+//         }
+//     })
 
-    const greetAll = document.getElementsByName('greeting');
-    let greeting = 0;
-    greetAll.forEach(element => {
-        if (element.checked) {
-            greeting = `${element.value}`;
-        }
-    })
+//     const greetAll = document.getElementsByName('greeting');
+//     let greeting = 0;
+//     greetAll.forEach(element => {
+//         if (element.checked) {
+//             greeting = `${element.value}`;
+//         }
+//     })
 
-    let card = new Card(senderName, accepterName, email, sex, greeting, comment);
+//     let card = new Card(senderName, accepterName, email, sex, greeting, comment);
 
-    console.log(card);
-})
+//     console.log(card);
+// })
 
 //модальное окно
 const openPopupButtons = document.querySelectorAll('.popup__open'); //кнопки-ссылки открытия
@@ -104,12 +104,31 @@ const popupClose = (popupActive) => {
 //отправка формы
 document.querySelector('.sendBtn').addEventListener('click', (e) => {
     e.preventDefault();
+    popupClose(e.target.closest('.popup'));
 
     fetch('https://httpbin.org/post', {
             method: 'POST',
             body: new FormData(popup__content)
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data.form.sex);
+            if (data.form.sex = 'male') {
+                console.log(data.form.sex);
+                document.querySelector('.container-card').innerHTML = `
+                            <h3>Дорогой <span>${data.form.accepterName}</span>!</h3>
+                            <p>${data.form.comments}</p>
+                            <p>${data.form.senderName}</p>
+                            `;
+            } else if (data.form.sex = 'female') {
+                console.log(data.form.sex);
+                document.querySelector('.container-card').innerHTML = `
+                            <h3>Дорогая <span>${data.form.accepterName}</span></h3>
+                            <p>${data.form.comments}</p>
+                            <p>${data.form.senderName}</p>
+                            `;
+            };
+            document.querySelector('.container-card').classList.add('hidden');
+        })
         .catch(err => console.log(err));
 })

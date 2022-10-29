@@ -12,6 +12,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="icon" href="/image/icons8-christmas-bulb-64.png">
     <title>Скоро Новый год</title>
 </head>
 
@@ -70,14 +71,14 @@
                         <input type="radio" name="sex" id="female" value="female" />
                     </div>
                 </div>
-                <div class="comments">
+                <div class="item">
                     <label for="comm">Текст поздравления</label>
                     <textarea name="comments" id="comm" cols="40" rows="10"></textarea>
                 </div>
 
                 <div class="buttons">
-                    <button class="saveBtn">Сохранить</button>
-                    <button type="submit" class="sendBtn" form="questionlist">Создать открытку</button>
+                    <!-- <button class="saveBtn">Сохранить</button> -->
+                    <button type="submit" class="sendBtn" form="popup__content">Создать открытку</button>
                 </div>
             </form>
         </div>
@@ -85,9 +86,7 @@
 
     <!-- Открытка -->
     <div class="container-card">
-        <h3>Дорогой, <span>${data.form.accepterName}</span></h3>
-        <h3>Дорогая, <span>${data.form.accepterName}</span></h3>
-        <p>${data.form.comment}</p>
+
     </div>
 
 
