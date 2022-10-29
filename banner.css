@@ -1,0 +1,28 @@
+.banner__container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/image/girlanda.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner__text {
+    font-size: 125px;
+    margin-left: 20%;
+    margin-top: 10%;
+
+}
+
+.banner__inside {
+    padding: 150px 200px;
+
+}
+
+.santa-img {
+    position: absolute;
+    right: 1px;
+    bottom: 0px;
+    height: 90%;
+
+}
