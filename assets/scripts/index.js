@@ -32,34 +32,6 @@ class Card {
     }
 }
 
-// document.querySelector('.saveBtn').addEventListener('click', (e) => {
-//     e.preventDefault();
-//     const senderName = document.querySelector('#senderName').value;
-//     const accepterName = document.querySelector('#accepterName').value;
-//     const email = document.querySelector('#email').value;
-//     const comment = document.querySelector('#comm').value;
-
-//     const sexAll = document.getElementsByName('sex');
-//     let sex = 0;
-//     sexAll.forEach(element => {
-//         if (element.checked) {
-//             sex = `${element.id}`;
-//         }
-//     })
-
-//     const greetAll = document.getElementsByName('greeting');
-//     let greeting = 0;
-//     greetAll.forEach(element => {
-//         if (element.checked) {
-//             greeting = `${element.value}`;
-//         }
-//     })
-
-//     let card = new Card(senderName, accepterName, email, sex, greeting, comment);
-
-//     console.log(card);
-// })
-
 //модальное окно
 const openPopupButtons = document.querySelectorAll('.popup__open'); //кнопки-ссылки открытия
 const closePopupButtons = document.querySelectorAll('.popup__close'); //кнопки-ссылки закрытия
