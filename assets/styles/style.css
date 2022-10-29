@@ -45,6 +45,10 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     height: 800px;
+    
+}
+
+.postcard_flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
