@@ -60,14 +60,55 @@ document.querySelector('.saveBtn').addEventListener('click', (e) => {
     console.log(card);
 })
 
+//отправка формы
 document.querySelector('.sendBtn').addEventListener('click', (e) => {
     e.preventDefault();
 
     fetch('https://httpbin.org/post', {
             method: 'POST',
-            body: new FormData(questionlist)
+            body: new FormData(popup__content)
         })
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(err => console.log(err));
 })
+
+//модальное окно
+const openPopupButtons = document.querySelectorAll('.popup__open'); //кнопки-ссылки открытия
+const closePopupButtons = document.querySelectorAll('.popup__close'); //кнопки-ссылки закрытия
+
+for (let openPopupButton of openPopupButtons) {
+    openPopupButton.addEventListener('click', (event) => {
+        const popupName = openPopupButton.getAttribute('href').replace('#', '');
+        const currentPopup = document.getElementById(popupName);
+        popupOpen(currentPopup);
+
+        event.preventDefault;
+    })
+}
+
+for (let closePopupButton of closePopupButtons) {
+    closePopupButton.addEventListener('click', (event) => {
+        popupClose(event.target.closest('.popup'));
+        event.preventDefault;
+    })
+}
+
+const popupOpen = (currentPopup) => {
+    if (currentPopup) {
+        const popupActive = document.querySelector('.popup.open');
+
+        if (popupActive) {
+            popupClose(popupActive, false);
+        }
+    }
+    currentPopup.classList.add('open');
+    currentPopup.addEventListener('click', (event) => {
+        if (!event.target.closest('.popup__content')) {
+            popupClose(event.target.closest('.popup'));
+        }
+    })
+}
+const popupClose = (popupActive) => {
+    popupActive.classList.remove('open');
+}
