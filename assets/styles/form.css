@@ -16,7 +16,7 @@ input {
     left: 0;
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s all;
+    /* transition: 0.5s all; */
 }
 
 .popup__body {
@@ -55,4 +55,19 @@ input {
     opacity: 1;
     visibility: visible;
     transition: 0.5s all;
+}
+
+.hidden {
+    min-width: 60%;
+    margin: auto;
+    min-height: 300px;
+    background-image: url('/image/card_bg.jpg');
+
+}
+
+.container-card {
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    max-height: 300px;
 }
