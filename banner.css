@@ -1,10 +1,3 @@
-@import "./container-banner/container-banner.css";
-@import "./form.css";
-
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
 .banner__container {
     height: 100vh;
     width: 100vw;
